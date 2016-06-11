@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+ 	<welcome-file-list>
+ 		<welcome-file>index.html</welcome-file>
+ 		<welcome-file>index.jsp</welcome-file>	
+ 	</welcome-file-list>
+ 	<!-- 设置session的生命周期 单位/分钟 -->
+<!-- 	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config> -->
+ 	 <!--                     公司管理配置                                                          -->
+ 	 <servlet>
+    <description>SmartUploadForPublish</description>
+    <display-name>SmartUploadForPublish</display-name>
+    <servlet-name>SmartUploadForPublish</servlet-name>
+    <servlet-class>com.Manager.Company.SmartUploadForPublish</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SmartUploadForPublish</servlet-name>
+  	<url-pattern>/com.Manager.Company/SmartUploadForPublish</url-pattern>
+  </servlet-mapping> 
+   	 <servlet>
+    <description>SmartUploadForAttachment</description>
+    <display-name>SmartUploadForAttachment</display-name>
+    <servlet-name>SmartUploadForAttachment</servlet-name>
+    <servlet-class>com.Manager.Company.SmartUploadForAttachment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SmartUploadForAttachment</servlet-name>
+  	<url-pattern>/com.Manager.Company/SmartUploadForAttachment</url-pattern>
+  </servlet-mapping> 
+  	 <servlet>
+    <description>AddPublish</description>
+    <display-name>AddPublish</display-name>
+    <servlet-name>AddPublish</servlet-name>
+    <servlet-class>com.Manager.Company.AddPublish</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddPublish</servlet-name>
+  	<url-pattern>/com.Manager.Company/AddPublish</url-pattern>
+  </servlet-mapping> 
+   	 <servlet>
+    <description>GetPublishByPage</description>
+    <display-name>GetPublishByPage</display-name>
+    <servlet-name>GetPublishByPage</servlet-name>
+    <servlet-class>com.Manager.Company.GetPublishByPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GetPublishByPage</servlet-name>
+  	<url-pattern>/com.Manager.Company/GetPublishByPage</url-pattern>
+  </servlet-mapping>
+<servlet>
+    <description>BatchDownload</description>
+    <display-name>BatchDownload</display-name>
+    <servlet-name>BatchDownload</servlet-name>
+    <servlet-class>com.Manager.Company.BatchDownload</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>BatchDownload</servlet-name>
+  	<url-pattern>/com.Manager.Company/BatchDownload</url-pattern>
+  </servlet-mapping>  
+ 	<!--                     util 配置                                                         -->
+ 	<servlet>
+    <description>SmartDownlodServlet</description>
+    <display-name>SmartDownlodServlet</display-name>
+    <servlet-name>SmartDownload</servlet-name>
+    <servlet-class>com.Manager.Util.SmartDownloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SmartDownload</servlet-name>
+  	<url-pattern>/com.Manager.Util/SmartDownload</url-pattern>
+  </servlet-mapping> 
+  
+  	<servlet>
+    <description>SmartUploadServlet</description>
+    <display-name>SmartUploadServlet</display-name>
+    <servlet-name>SmartUploadServlet</servlet-name>
+    <servlet-class>com.Manager.Util.SmartUploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SmartUploadServlet</servlet-name>
+  	<url-pattern>/com.Manager.Util/SmartUploadServlet</url-pattern>
+  </servlet-mapping> 
+  <!--                     个人管理配置                                                          -->
+  <servlet>
+    <description>Arrangement</description>
+    <display-name>Arrangement</display-name>
+    <servlet-name>Arrangement</servlet-name>
+    <servlet-class>com.Manager.Individual.Arrangement</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Arrangement</servlet-name>
+  	<url-pattern>/com.Manager.Individual/Arrangement</url-pattern>
+  </servlet-mapping> 
+   <servlet>
+    <description>InsertUpdateDelCal</description>
+    <display-name>InsertUpdateDelCal</display-name>
+    <servlet-name>InsertUpdateDelCal</servlet-name>
+    <servlet-class>com.Manager.Individual.InsertUpdateDelCal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>InsertUpdateDelCal</servlet-name>
+  	<url-pattern>/com.Manager.Individual/InsertUpdateDelCal</url-pattern>
+  </servlet-mapping> 
+  <servlet>
+    <description>UpdateInfo</description>
+    <display-name>UpdateInfo</display-name>
+    <servlet-name>UpdateInfo</servlet-name>
+    <servlet-class>com.Manager.Individual.UpdateInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UpdateInfo</servlet-name>
+  	<url-pattern>/com.Manager.Individual/UpdateInfo</url-pattern>
+  </servlet-mapping> 
+ 	<!--                     通讯录配置                                                          -->
+   <servlet>
+    <description>This is  AddOne Contact</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Addone</servlet-name>
+    <servlet-class>com.Manager.Communication.Addone</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Addone</servlet-name>
+  	<url-pattern>/com.Manager.Communication/Addone</url-pattern>
+  </servlet-mapping> 
+   <servlet>
+    <description>This is ContactList</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Contact</servlet-name>
+    <servlet-class>com.Manager.Communication.ContactList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Contact</servlet-name>
+  	<url-pattern>/com.Manager.Communication/ContactList</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EditContact</servlet-name>
+    <servlet-class>com.Manager.Communication.EditContact</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EditContact</servlet-name>
+  	<url-pattern>/com.Manager.Communication/EditContact</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetContactByPage</servlet-name>
+    <servlet-class>com.Manager.Communication.GetContactByPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GetContactByPage</servlet-name>
+  	<url-pattern>/com.Manager.Communication/GetContactByPage</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteList</servlet-name>
+    <servlet-class>com.Manager.Communication.DeleteContact</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteList</servlet-name>
+  	<url-pattern>/com.Manager.Communication/DeleteContact</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DownloadExcel</servlet-name>
+    <servlet-class>com.Manager.Communication.DownloadExcel</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DownloadExcel</servlet-name>
+  	<url-pattern>/com.Manager.Communication/DownloadExcel</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>this is message</description>
+    <display-name>this is message</display-name>
+    <servlet-name>GetMessageByPage</servlet-name>
+    <servlet-class>com.Manager.Communication.GetMessageByPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GetMessageByPage</servlet-name>
+  	<url-pattern>/com.Manager.Communication/GetMessageByPage</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description>this is markerMessage</description>
+    <display-name>this is markerMessage</display-name>
+    <servlet-name>markerMessage</servlet-name>
+    <servlet-class>com.Manager.Communication.markerMessage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>markerMessage</servlet-name>
+  	<url-pattern>/com.Manager.Communication/markerMessage</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+    <description>this is Login</description>
+    <display-name>this is Login</display-name>
+    <servlet-name>GetAdminList</servlet-name>
+    <servlet-class>com.Manager.Communication.GetAdminList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GetAdminList</servlet-name>
+  	<url-pattern>/com.Manager.Communication/GetAdminList</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>ShowExcel</description>
+    <display-name>ShowExcel</display-name>
+    <servlet-name>ShowExcel</servlet-name>
+    <servlet-class>com.Manager.Communication.ShowExcel</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ShowExcel</servlet-name>
+  	<url-pattern>/com.Manager.Communication/ShowExcel</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>shortMessage</description>
+    <display-name>shortMessage</display-name>
+    <servlet-name>shortMessage</servlet-name>
+    <servlet-class>com.Manager.Communication.SendMessage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>shortMessage</servlet-name>
+  	<url-pattern>/com.Manager.Communication/SendMessage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>UpdateContact</description>
+    <display-name>UpdateContact</display-name>
+    <servlet-name>UpdateContact</servlet-name>
+    <servlet-class>com.Manager.Communication.UpdateContact</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UpdateContact</servlet-name>
+  	<url-pattern>/com.Manager.Communication/UpdateContact</url-pattern>
+  </servlet-mapping>
+  
+  <!--                     邮箱发送配置                                   -->
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Mail</servlet-name>
+    <servlet-class>com.Manager.Util.Mail</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Mail</servlet-name>
+  	<url-pattern>/com.Manager.Util/Mail</url-pattern>
+  </servlet-mapping>
+  
+   	<!--                     登入配置                                                          -->
+  <servlet>
+    <description>Registered</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Registered</servlet-name>
+    <servlet-class>com.Manager.Home.Registered</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Registered</servlet-name>
+  	<url-pattern>/com.Manager.Home/Registered</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+    <description>Login</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.Manager.Home.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/com.Manager.Home/Login</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description>LoginOut</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginOut</servlet-name>
+    <servlet-class>com.Manager.Home.LoginOut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginOut</servlet-name>
+  	<url-pattern>/com.Manager.Home/LoginOut</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description>ChangePassword</description>
+    <display-name>ChangePassword</display-name>
+    <servlet-name>ChangePassword</servlet-name>
+    <servlet-class>com.Manager.Home.ChangePassword</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ChangePassword</servlet-name>
+  	<url-pattern>/com.Manager.Home/ChangePassword</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>Validate</description>
+    <display-name>Validate</display-name>
+    <servlet-name>Validate</servlet-name>
+    <servlet-class>com.Manager.Home.ValidateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Validate</servlet-name>
+  	<url-pattern>/com.Manager.Home/ValidateServlet</url-pattern>
+  </servlet-mapping>
+  
+ 
+ 
+   	<!--                     首页配置                                                         -->
+ 	<servlet>
+    <description>GetTrendData</description>
+    <display-name>GetTrendData</display-name>
+    <servlet-name>GetTrendData</servlet-name>
+    <servlet-class>com.Manager.Home.GetTrendData</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GetTrendData</servlet-name>
+  	<url-pattern>/com.Manager.Home/GetTrendData</url-pattern>
+  </servlet-mapping>
+  
+  	<servlet>
+    <description>GetNumList</description>
+    <display-name>GetNumList</display-name>
+    <servlet-name>GetNumList</servlet-name>
+    <servlet-class>com.Manager.Home.GetNumList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GetNumList</servlet-name>
+  	<url-pattern>/com.Manager.Home/GetNumList</url-pattern>
+  </servlet-mapping>
+ 
+ 
+ 
+<!--                   错误页面                                                            -->
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/Error/Error404.jsp</location>
+  </error-page>
+  <error-page>
+  	<exception-type>java.lang.Exception</exception-type>
+  	<location>/Error/Error404.jsp</location>
+  </error-page>
+  <error-page> 
+        <error-code>500</error-code> 
+        <location>/Error/Error500.jsp</location> 
+    </error-page> 
+   <error-page> 
+        <error-code>405</error-code> 
+        <location>/Error/Error405.jsp</location> 
+    </error-page> 
+  <!--                         全局变量                                                     -->  
+    
+ 
+  <context-param>
+  	<param-name>encoding</param-name>
+  	<param-value>utf-8</param-value>
+  </context-param>
+  <!-- 局部变量 -->
+  <!-- <servlet>
+    <servlet-name>Servlet</servlet-name>
+    <servlet-class>servlets.Servlet</servlet-class>
+    <init-param>
+    	<param-name>driverClassName</param-name>
+    	<param-value>sun.jdbc.odbc.jdbcOdbcDriver</param-value>
+    </init-param>
+  </servlet>  -->
+  
+  
+   <!--                         编码过滤器                                       -->
+ <filter>
+  	<filter-name>EncodingFilter</filter-name>
+  	<filter-class>WebFilter.EncodingFilter</filter-class>
+</filter>
+  <filter-mapping>
+  	<filter-name>EncodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping> 
+  
+  
+
+  
+  
+     <!--                      用户控制                                      -->
+  
+ <filter>
+  <filter-name>CheckLoginFilter</filter-name>
+  <filter-class>WebFilter.CheckLoginFilter</filter-class>
+  <init-param>
+       <param-name>checkSessionKey</param-name> 
+       <param-value>login</param-value> 
+  </init-param>
+  <init-param>
+	  <param-name>redirectURL</param-name>
+	  <param-value>/index.jsp</param-value>
+  </init-param>
+  <init-param>
+       <param-name>notCheckURLList</param-name> 
+       <param-value>/Error/Error404.jsp;/index.jsp;/Registered.jsp;/Home.jsp;</param-value> 
+  </init-param>
+   
+ </filter>
+  <filter-mapping>
+	  <filter-name>CheckLoginFilter</filter-name>
+	  <url-pattern>*.jsp</url-pattern>
+ </filter-mapping>
+
+<!-- 自定义标签 -->
+<jsp-config>
+   
+    <taglib>
+
+        <taglib-uri>/Mytag</taglib-uri>
+
+        <taglib-location>/WEB-INF/Mytag.tld</taglib-location>
+
+    </taglib>
+	
+	  <jsp-property-group>   
+	  <description>   
+	  Special property group for JSP Configuration HTML   
+	  example.   
+	  </description>   
+	  <display-name>JSPConfiguration</display-name>   
+	  <url-pattern>*.jsp</url-pattern>   
+	  <el-ignored>false</el-ignored>   
+	  <page-encoding>UTF-8</page-encoding>   
+	  <scripting-invalid>false</scripting-invalid>   
+	  <include-prelude></include-prelude>   
+	  <include-coda></include-coda>   
+	  </jsp-property-group>   
+</jsp-config>
+
+</web-app>

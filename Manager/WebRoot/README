@@ -1,0 +1,133 @@
+/**
+*企业后台管理系统
+*版本1.0
+*开发者：程胜
+*使用语言：Java
+*
+**/
+1：新建一个javaweb项目
+
+2：建立静态页面
+
+3：编写后台业务逻辑
+
+4：连接数据库（打开前后台）实现动态化
+
+5：测试（内测<黑盒、白盒>,公测<目标用户参与测试>）找bug
+
+6：正式上线运行
+
+7：根据用户需求改功能
+
+目标实现功能：
+1：增删改查
+2：excel导入导出
+3：文件上传和下载
+4：图表展示
+5：邮箱发送(单发和群发)
+6：联网搜索
+7：短信发送
+8：相关政策获得
+9：智能助手，图灵机器人接入
+
+
+文档目录结构
+
+Manager
+|-- Src
+    |-- com.Manager.Bean
+   		|--Calendar.java
+   		 --ContactBean.java
+   		 --ErrorMsgBean.java
+   		 --LoginBean.java
+   		 --PublishBean.java
+   		 --ShortMessageBean.java
+   	|-- com.Manager.Communication --联系人
+   		|--Addone.java            --添加联系人Servlet
+   		 --ContactList.java		  --联系人列表Servlet
+   		 --DeleteContect.java     --删除联系人Servlet
+   		 --DownloadExcel.java     --下载电子表格Servlet
+   		 --EditContact.java       --编辑联系人Servlet
+   		 --GetAdminList.java      --得到管理员列表Servlet
+   		 --GetContactByPage.java  --得到联系人通过分页Servlet
+   		 --GetMessageByPage.java  --得到消息通过分页Servlet
+   		 --markerMessage.java     --标记短消息Servlet
+   		 --SendMessage.java       --发送短消息Servlet
+   		 --ShowExcel.java         --显示电子表格Servlet
+   		 --UpdataContact.java     --更新联系人Servlet
+   	|-- com.Manager.Company       			--公司
+   		--AddPublish.java		  			--发布
+   		--BatchDownload.java     		 	--批量下载
+   		--GetPublishByPage.java   			--得到发布通过分页
+   		--SmartUploadForAttachment.java     --上传附件
+   		--SmartUploadForPublish.java        --上传图片
+   	|-- com.Manager.Home          --主页
+   		--ChangePassword.java     --修改密码
+   		--GeNumList.java          --得到数据列表
+   		--GetTrendData.java       --得到趋势图数据
+   		--Login.java              --登录      
+   		--LoginOut.java           --注销
+   		--Registered.java         --注册
+   		--VaildateServlet.java	  --验证码
+   	|-- com.Manager.Individual        --个人
+   		--Arragement.java             --安排
+   		--InsertUpdateDelCal.java     --上传文件
+   		--UpdateInfo.java             --更新信息
+   	|-- com.Manager.Service
+   		--CalendarService.java				
+   		--ContactService.java
+   		--LoginService.java
+   		--MessageService.java
+   		--PublishService.java
+   	|-- com.Manager.Util
+   		--DateTimeUtil.java         --时间处理类
+   		--ExcelUtile.java           --Excel处理类
+   		--FileUplaodServlet.java    --
+   		--Mail.java                 --邮箱类
+   		--PropertiesUtil.java
+   		--SmartDownloadServlet.java   
+   		--SmartUploadServlet.java
+   		--StringUtil.java           --字符串处理类
+   		--TrendData.java
+   	    --UtilJDBC.java
+   	|-- WebFilter
+   		--BlockTag.java              --自定义标签
+   		--CheckLoginFilter.java      --登入过滤器
+   		--EncodingFileter.java       --编码过滤器
+   		--OverwriterTag.java         --自定义标签
+   		
+   		
+   		
+   		
+   		
+|--WebRoot
+	--CommunicationView
+	--CompanyView
+	|--Content
+		--bootstrap
+		--image
+		--themes
+	--Css
+	--DownLoadFile
+	--Error
+	--Img
+	--Individual
+	--JS
+	|--Scripts
+		--bootstrap
+	|--share
+		--_Layout.jsp
+	        --index.jsp
+	        --Weclome.jsp
+	        --Registered.jsp
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,120 @@
+@CHARSET "UTF-8";
+
+ html {
+            	width:100%;
+	            height:100%;
+}
+        body {                      
+           background: linear-gradient(243deg, #18bf94, #bf4d18);
+            background-size: 400% 400%;
+
+            -webkit-animation: AnimationName 49s ease infinite;
+            -moz-animation: AnimationName 49s ease infinite;
+            -o-animation: AnimationName 49s ease infinite;
+            animation: AnimationName 49s ease infinite;
+
+
+         }
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+@keyframes AnimationName { 
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+
+        #main {
+            margin:100px auto;
+            padding:30px 20px;
+            max-width:330px;
+            background-color:rgba(255,255,255,0.1);
+            color:rgba(255,255,255,0.8);
+            
+        }
+       .logo {
+            text-align:center; 
+             margin-bottom:20px;  
+        }
+        .logo img{
+        	width:80px;
+        	height:80px;
+	        border:1px solid #fff;
+	        border-radius:50%;
+	        position:relative;
+	        left:50%;
+	        margin-left:-40px;
+	       
+        }
+        .content {
+            text-align:center;
+            
+        }
+        h3{
+        margin-bottom:30px;
+        }
+        .form-control {
+            padding:8px 5px;
+            width:240px;
+            border:1px solid #d7d3d3;
+            
+        }
+        .form-actions {
+            padding-top:40px;
+            text-align:center;
+        }
+        .control-label{
+        display:inline-block;
+        width:60px;
+        text-align: right;
+        }
+        .tip{
+        	display:block;
+        	height:30px;
+        	line-height:30px;
+        }
+        .Registered{        	
+        	padding-right:40px;
+        	text-align: right;   
+        }
+        .Registered a:hover{
+        	color:#ccc;
+        }
+        .form-actions .btnLogin {
+            display:block;
+            border:0;
+            background-color:#4d90fe;
+           
+            width:100px;
+            margin:0 auto;
+            padding:10px 0;
+            cursor:pointer;
+            font-size:16px;
+            color:#fff;
+          
+        }
+        #ValidatePic{
+       	 display:inline-block;vertical-align:middle;
+   		position:relative;
+   		cursor:pointer;
+   		top:-3px;
+        }
+        #spanValidate{
+        	color:red;
+        }
+        .footer {
+            position:fixed;
+            bottom:5px;
+            font-size:14px;
+            text-align:center;
+            width:100%;
+            color:#CCC;
+        }
